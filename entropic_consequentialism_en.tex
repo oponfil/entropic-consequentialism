@@ -1,0 +1,367 @@
+% !TEX root = entropic_consequentialism_en.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \pdfminorversion=5
+  \pdfobjcompresslevel=0
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\else
+  % XeTeX/tectonic build: Latin Modern through fontspec, so that Unicode in the bibliography is typeset correctly
+  \usepackage{fontspec}
+\fi
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[hidelinks,pdfversion=1.5]{hyperref}
+\usepackage{indentfirst}
+\emergencystretch=2em
+\newcommand{\Sref}[1]{\hyperref[#1]{\S\ref{#1}}}
+
+\title{\textbf{Entropic Consequentialism}}
+\author{%
+  Oleg Ponfilenok\\[0.35em]%
+  {\normalsize Independent researcher; \href{mailto:ponfil@gmail.com}{ponfil@gmail.com}}%
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{flushright}
+\emph{A future with higher uncertainty\\ is statistically more probable.}
+\end{flushright}
+\vspace{0.5em}
+
+\begin{abstract}
+The goals of people, civilizations and artificial agents are today set subjectively and are bounded by the planning horizon of whoever sets them. We propose to derive the goal from physics. In a naturalistic picture of the world the gap between ``is'' and ``ought'' disappears if what ought to be is understood as the part of the future state of the world that depends on the agent's actions. The law of the future is supplied by the TIMEP hypothesis (time-integrated maximum entropy production), which extends the maximum entropy production principle to non-stationary systems; we propose a way to test it. On this hypothesis rests entropic consequentialism, or entropic ethics: actions are compared by the entropy production they are forecast to yield. It goes beyond the hypothesis itself: it takes into account that life expands its own boundary and changes its external conditions. It is an accelerationist, collectivist ethics with a single measurable quantity; pluralism and protection of the weak follow in it as consequences. It is non-anthropocentric and applies to any form of life and to any dissipative system, including artificial agents.
+\end{abstract}
+
+\noindent\textbf{Keywords:} entropic consequentialism; entropic ethics; TIMEP; maximum entropy production; is--ought problem; naturalism; teleology; accelerationism; non-anthropocentric ethics; artificial agents
+
+\vspace{1em}
+
+%%% ===================================================================
+\section{Introduction}\label{sec:intro}
+%%% ===================================================================
+
+Every acting agent---a person, a state, a corporation, an autonomous program---needs a goal. Today goals come from two sources. The first is tradition and personal preference: morality, law, ideology. The second, for artificial agents, is direct specification by a human or learning from human preferences~\cite{russell2019,hadfield2016}. In both cases the goal is subjective. It requires a human in the loop of goal-setting, the goals of different people contradict each other, and all of them are bounded by the planning horizon of whoever sets them. For agents that will plan decades and centuries ahead this is not enough.
+
+The obvious alternative is to look for a goal in the laws of nature. Attempts are old: Ostwald derived an ``energetic imperative'' from energetics~\cite{ostwald1912}, Lotka a direction of evolution from maximum energy flux~\cite{lotka1922}; contemporary authors discuss the meaning and direction of evolution in a cosmological perspective~\cite{vidal2014,stewart2026}. All such attempts run into one objection, which goes back to Hume~\cite{hume1739}: a description of what is does not logically entail what ought to be. However exact a law of nature may be, it only describes.
+
+In this paper we take three steps.
+
+The first step is general and does not depend on any particular physics (\Sref{sec:isought}). We show that in a naturalistic picture of the world the normative premise is not independent. It suffices to redefine the term: ``ought'' is ``is'' in the future. After the redefinition, what ought to be is derived from what is in the same way as a forecast is derived from initial conditions and a law of motion.
+
+The second step is physical (\Sref{sec:timep}--\Sref{sec:test}). A law of the future is needed. Formally physics has one: dynamics, the equations of motion. But for large open dissipative systems it is a poor forecasting tool. Such systems are chaotic: small differences in initial conditions grow exponentially, at a rate set by the Kolmogorov--Sinai entropy. At any finite precision with which the present is known, the trajectory beyond a finite horizon is dynamically undetermined. Life and civilization are exactly such systems. They need a law of another type: not an equation for an individual trajectory but a statistical principle that says which trajectories are realized. As such a law we put forward the TIMEP hypothesis (Time-Integrated Maximum Entropy Production)---an extension of the maximum entropy production principle (MEP) to non-stationary systems---and state the conditions under which it can be tested and refuted.
+
+The third step joins the first two (\Sref{sec:teleology}--\Sref{sec:consequences}). Substituting TIMEP into the general scheme gives \emph{entropic consequentialism}: actions are evaluated by their contribution to total entropy production over the longest horizon and within the widest boundary. We examine the consequences of such an ethics and outline a programme for testing them.
+
+%%% ===================================================================
+\section{``Is'' and ``ought'' in a naturalistic picture of the world}\label{sec:isought}
+%%% ===================================================================
+
+\paragraph{Where the gap comes from.}
+Hume's objection is formal. A valid inference adds nothing to its premises: the conclusion cannot contain a substantive term that was absent from them. If all the premises are descriptive (``X increases Y'', ``systems with larger Y persist''), then the conclusion ``X ought to be done'' contains a new word, and the inference is invalid until the link ``one ought to do what increases Y'' is added. The known formal counterexamples~\cite{prior1960} are trivial and yield no substantive ethics.
+
+The link can be introduced in three ways: as an axiom; as a hypothetical imperative (``if you want A, do B''); or as a reductive identity, in which the normative term is defined through a descriptive one~\cite{railton1986}. We take the third route and give the identity a definite content.
+
+\paragraph{Redefinition: ``ought'' is ``is'' in the future.}
+What does ``ought'' mean? It is a statement about what is to be done. To do is to perform an action, and that action lies in the future. An agent's future actions are part of the future state of the world. Hence:
+
+\begin{quote}
+\emph{What ought to be is the part of the future state of the world that depends on the agent's actions.}
+\end{quote}
+
+``Is'' is the state of the world now. What ought to be differs from what is not in kind but in time: it is also a description, only a description of the future, in the part of it that lies within the agent's control.
+
+\paragraph{Deriving ``ought'' from ``is''.}
+The future state of the world depends on the present one. The dependence may be inexact, statistical, but it exists: it is exactly what physical laws describe. So the part of the future that consists of our actions depends on the present too. ``Ought'' is derived from ``is'' just as a forecast is derived from initial conditions. No separate normative premise is involved: after the redefinition there is no place left for it.
+
+\paragraph{Which of the possible actions ought to be done.}
+The definition says \emph{what} an ought-statement is about, but not which of the many available actions it picks. That choice is made by the law of the future. For large statistical systems its direction is known: it is set by Boltzmann's statistical principle. A macrostate with higher entropy is realized by a larger number of microstates, and therefore a more entropic, more uncertain future is statistically more probable. Reality is single: the future is not predetermined, but there will always be only one. If possible trajectories are not equally probable, if some systems displace others, then physical selection at once determines what will be and sets an objective criterion of what ought to be. Purposefulness and ``the good'' are then not categories independent of physics but a property of the processes that win in this selection. Not every possible future is realized, and an agent's actions either belong to the trajectory that is realized or do not. Hence the working definition:
+
+\begin{quote}
+\emph{``An agent ought to do X'' means: among the actions available to the agent, X gives the highest probability that the agent---itself, its descendants, its collective, its lineage---will be part of the future that is realized.}
+\end{quote}
+
+This is a descriptive statement in the future tense. It is true or false, and this can be checked. It therefore meets Popper's criterion of scientific status: it can be refuted~\cite{popper1959}. The scheme holds for any physicalist picture of the world; a concrete ethics is obtained by substituting a concrete law of the future. In \Sref{sec:timep} we substitute TIMEP.
+
+\paragraph{This is not fatalism.}
+If ``ought'' simply meant ``what will be'', a norm would guide nothing: whatever happened would have been what ought to be. But the definition is tied to the agent. At the level of a large system the direction is set statistically. At the level of the agent the future is not settled: there are many trajectories, and some actions keep the agent in the future while others do not. Let an asteroid be approaching the Earth. The phrase ``the asteroid ought not to hit the Earth'' is not about its trajectory: without our intervention it will hit. It is about our future actions: we ought to deflect it, because otherwise we will not be in the future.
+
+\paragraph{Two levels: reality and explanation.}
+At the level of reality no premise is needed. Dissipative systems, the biosphere, civilization as a whole are large statistical systems. They have no consciousness that could accept or reject a norm, and selection needs neither consciousness nor agency nor free will. Here physics is at work, and Hume's guillotine has nothing to cut. The question ``why is this good?'' arises only at the second level---for a reasoning agent able to ask it. For such an agent the link between ought and is returns, no longer as a premise but as an \emph{explanation}: why an ethics can be built on physics, why it should be exactly this one, and why it should be scientific. To give this explanation is the task of the present paper.
+
+\paragraph{Not to be good, but to turn out right.}
+Ethics is usually understood as a teaching about how to be good. But one can be good only from the standpoint of some ethics, and for any behaviour a system can be found that approves it. An ethics is therefore needed not in order to be good but in order to turn out right: so that the agent who follows it gains an advantage, passes selection and ends up in the future. An ethics is a compressed forecast: a set of rules that tell the agent which actions keep it in the future, without recomputing that future each time anew.
+
+It follows that ethics are themselves subject to selection. An ethics that does not correlate with what persists disappears together with the agents who follow it. A conscious agent may choose not to survive and not to reproduce, but then in time it will vanish together with its rebellious imperative; those remain whose ``ought'' correlates with selection. This is probably why the morals and commandments of the mass religions are so alike. That moral attitudes are shaped by selection has long been discussed~\cite{ruse1986,street2006}; we draw a constructive conclusion from it. A ship floats by Archimedes' law whether or not its captain knows of it. Those who build ships with this law in mind---who take a material lighter than water and tar the seams so that water does not get in---stay afloat. The ships of those who disregard the law sink together with them. Natural selection does its work. So it is with the law of the future: whether to follow it is for each agent to decide, but the population of surviving agents follows it---because it is exactly on this that their survival depends.
+
+\paragraph{So, to survive and reproduce is good.}
+Darwinian theory by itself only describes who left descendants. When practical conclusions are drawn from it, a premise is usually added tacitly: to survive and reproduce is good. In our scheme this is not a premise but a consequence. Agents who are indifferent to whether they end up in the future do not end up there; the very striving to be there is a product of the same selection. And since what ought to be is defined through reaching the future, survival and reproduction turn out to be particular ways of fulfilling it, applicable to systems with heredity. The general criterion is wider: it also applies to systems to which Darwinian evolution does not apply directly, because they lack heredity or reproduction in the biological sense.
+
+%%% ===================================================================
+\section{From MEP to TIMEP}\label{sec:timep}
+%%% ===================================================================
+
+\paragraph{The maximum entropy production principle.}
+The second law says that the entropy of an isolated system does not decrease, but it does not say how fast it grows. The maximum entropy production principle (MEP) says more: an open system far from equilibrium selects, among the steady states accessible to it, the one in which entropy is produced fastest~\cite{martyushev2006,kleidon2010}. The principle has no general proof. The information-theoretic derivation proposed by Dewar~\cite{dewar2003} rests on additional assumptions~\cite{grinstein2007,bruers2007}; counterexamples are known for local production~\cite{ross2012}; near equilibrium Prigogine's theorem of minimum entropy production, opposite in sign, holds. Reviews agree that it is not a theorem but a hypothesis with a limited domain of applicability~\cite{martyushev2021}. This does not mean that the principle is wrong: it has not been proved in general, but neither has it been refuted. One limitation is essential: as a selection principle MEP works for fixed constraints and for steady states~\cite{canizares2023}. Life is not such a system: it is non-stationary, it changes and evolves.
+
+\paragraph{The TIMEP hypothesis.}
+We extend the principle to non-stationary systems in which the dynamics itself is an internal degree of freedom while the external constraints remain constant. The hypothesis:
+
+\begin{quote}
+\emph{Under constant external constraints, a system evolves along that physically admissible trajectory on which the most entropy is produced over the whole duration of the process.}
+\end{quote}
+
+The total entropy produced is counted inside a chosen boundary as the change of entropy inside plus the entropy flux outward:
+\begin{equation}\label{eq:timep}
+\Sigma(T)=\int_0^T\left[\frac{dS_{\mathrm{in}}}{dt}+\oint \mathbf{J}_S\cdot d\mathbf{A}\right]dt\;\to\;\max .
+\end{equation}
+Here $S_{\mathrm{in}}$ is the entropy inside the boundary, $\mathbf{J}_S$ is the entropy flux density through the boundary, and $d\mathbf{A}$ is the outward-directed area element. Trajectories are compared at the same initial conditions, external constraints and time~$T$. We denote the integrand by $\sigma(t)$. In a steady state $dS_{\mathrm{in}}/dt=0$, $\Sigma=\sigma T$, and the maximum of the integral coincides with the maximum of the rate: classical MEP is a special case. In this formulation life and its evolution are not a change of the external constraints but internal degrees of freedom of the system.
+
+\paragraph{The boundary and the horizon are not arbitrary.}
+Both are set by the external conditions. The boundary is the minimal surface that encloses the connected dissipative system under consideration (the biosphere, and today also the technosphere) and on which the external fluxes are constant. For the Earth this is a sphere slightly larger than the atmosphere: on it the incoming solar flux is a constant external condition. Such a boundary is natural: it runs where entropy production breaks off sharply. On the Earth entropy is produced, and beyond the atmosphere there is space, in which the emitted photons simply travel without being scattered. Take a smaller boundary, and clouds and climate, that is, internal dynamics, become ``external''; take a larger one, and empty space is added, which changes nothing. The horizon $T$ tends to the time $\tau_{\mathrm{ext}}$ during which the external conditions remain constant: it is enough that their statistics change by no more than a factor of order unity. For the Earth this window is of the order of five billion years. The condition of applicability is
+\begin{equation}
+\tau_{\mathrm{ext}}\gg\tau_{\mathrm{int}},
+\end{equation}
+where $\tau_{\mathrm{int}}$ is the characteristic time of significant internal change: the system must have time to restructure itself many times while the external conditions stay the same.
+
+\paragraph{TIMEP is a principle for a given scale.}
+TIMEP is formulated for a definite boundary and a definite time, under constant external conditions. Together the natural boundary and the time $\tau_{\mathrm{ext}}$ set the space--time scale of the system. This does not limit the generality of the principle: the scale is specified anew each time, and at each scale the principle is applied separately. Boundaries are nested: the Earth, the Solar System, the Galaxy; each system has its own integral. Such a scale may even be the whole observable Universe (\Sref{sec:consequences}). As long as the connected system fits entirely inside the boundary, there is no point in counting beyond it: the biosphere is confined to the Earth. When the system goes beyond the boundary, as the technosphere is now going into space, the principle is applied at the next scale. In this sense TIMEP is a general physical principle, but it is always applied at a given scale: the boundary and the external conditions in it are given and fixed. What happens when a system itself changes its boundary and its external conditions, it does not describe; we return to this in \Sref{sec:ec}.
+
+\paragraph{TIMEP as a law of the future.}
+In \Sref{sec:isought} the law of the future itself was not specified: it was only shown that, whatever it turns out to be, what ought to be is derived from it. Boltzmann statistics gives only a direction: a more entropic state is more probable. TIMEP is our candidate for the law of the future: a hypothesis about the path by which a system moves toward such a state. The motivation is as follows. Fluctuation theorems relate the probability of a trajectory to the entropy produced along it: a trajectory on which entropy $\Sigma$ is produced is more probable than its time reverse by a factor of $e^{\Sigma/k_B}$~\cite{crooks1999,seifert2012}. The maximum caliber formalism builds a probability distribution over trajectories under given constraints~\cite{ghosh2020}. TIMEP states that over a long horizon this distribution is dominated by the trajectories with the largest $\Sigma$. This does not follow from the results just named: they motivate the hypothesis but do not prove it. A rigorous microdynamics from which TIMEP could be derived has not been constructed, and constructing it lies outside the scope of this work; below we describe only a hypothesis about the general mechanism.
+
+\paragraph{A mechanism without foresight.}
+How can a system ``choose'' a trajectory that is optimal over billions of years if kinetics sees only the next step? The conjectured mechanism is the competition of parallel trajectories. A large system tries many paths at once; the more dissipative ones capture the flows of energy and matter and suppress the less dissipative ones. The individual elements---molecules, organisms, agents---work as a statistical search. Foresight is not required; what is required is enough trials, that is, $\tau_{\mathrm{ext}}\gg\tau_{\mathrm{int}}$. An important property follows from the mechanism: the principle presupposes \emph{many} parallel trajectories. And this requires a surplus of resources: each trajectory consumes its share, and under a tight resource constraint parallel paths have nothing to live on.
+
+\paragraph{Predecessors and what is different here.}
+The idea that living systems maximize entropy production integrated over time is due to Vallino~\cite{vallino2010}; explicitly it is written as $\max\!\int\!\sigma\,dt\ge\int\!\max\sigma\,dt$, where the left-hand side stands for living systems with temporal strategies and the right-hand side for abiotic ones~\cite{vallino2020}. A closely related parallel work is~\cite{newbury2026}. Earlier kindred principles are Lotka's maximum energy flux~\cite{lotka1922} and Odum's maximum power~\cite{odum1988}, Swenson's law of maximum entropy production~\cite{swenson1989}, life as a manifestation of the second law~\cite{schneider1994}, dissipative adaptation~\cite{england2013,england2015}, energy rate density as a measure of complexity~\cite{chaisson2011}, and the growth of functional information~\cite{wong2023}. Our contribution is: the formulation~\eqref{eq:timep} through a balance on the boundary for the whole process; a rule that fixes the boundary and the horizon from the external conditions rather than at the observer's discretion; and the treatment of life and its evolution as internal degrees of freedom under fixed external constraints.
+
+\paragraph{Darwinian selection.}
+We conjecture that Darwinian selection is a special case of TIMEP for systems with heredity, variation and reproduction. This is a separate and unproven hypothesis. Selection acts directly on heritable reproductive success; that its outcomes coincide with the maximum of $\Sigma(T)$ has been shown only in particular models, for instance in an open chemostat, where selection raises the rate of metabolic entropy production under certain conditions~\cite{degioia2026}. Let us be precise about what is claimed: selection favours not those who themselves produce more entropy but those whose contribution increases the total production of the whole system. The system therefore needs both fast producers on sources already mastered and slow ones that open new sources. This is selection above the level of the individual. Formally it is described as multilevel selection~\cite{price1970,price1972}, and its mechanism in our case is the competition of parallel trajectories described above.
+
+%%% ===================================================================
+\section{Falsifiability of TIMEP}\label{sec:test}
+%%% ===================================================================
+
+\paragraph{The refutation criterion.}
+TIMEP and MEP differ in their predictions. Under MEP a system that has reached the steady state of maximal rate stays in it. Under TIMEP a system may temporarily leave a steady state and lower its entropy production rate---but only for the sake of a restructuring that opens a path to a higher rate. If there is no such path, the transition does not happen. Hence the falsifier:
+
+\begin{quote}
+\emph{If a system under constant external conditions leaves a steady state by itself and after restructuring remains permanently at a lower entropy production rate, the TIMEP hypothesis is refuted.}
+\end{quote}
+
+The observation time is fixed in advance, as a number of internal cycles of the system (see below).
+
+\paragraph{Where to test.}
+What is needed is a system with a constant inflow of energy and fast internal dynamics capable of accumulating structure. Candidates are: electromechanical networks of conducting particles that self-organize under a constant voltage~\cite{jun2005}; flow-through microbial reactors; ensembles of numerical models---artificial chemistry, adaptive networks, populations of agents in which goals are not set in advance but arise in the course of selection. In each case the observed trajectory, the alternative attainable trajectories and the ``greedy'' dynamics that maximizes the instantaneous rate are compared. Models in which the agents' goals are set in advance test no longer the hypothesis itself but the consequences of the ethics built on it; these are discussed in \Sref{sec:simulations}. We do not yet have a finished experimental design.
+
+\paragraph{How many internal cycles are needed.}
+The restructuring referred to in the criterion is a qualitative transition of the system from one state to another, a jump in its internal complexity. We conjecture that such a jump takes about $10^{10}$ internal cycles, that is, a ratio $\tau_{\mathrm{ext}}/\tau_{\mathrm{int}}$ of the order of $10^{10}$. This is one more, additional hypothesis: the number is not derived here and is so far confirmed by nothing; we expect that it can be tested experimentally. The same number sets the observation time in the refutation criterion: no fewer than $10^{10}$ internal cycles.
+
+\paragraph{The Jevons effect as a prediction.}
+Jevons observed that more efficient use of coal leads not to a reduction but to a growth of its consumption~\cite{jevons1865}. Economists debate whether the rebound always exceeds the saving~\cite{alcott2005,sorrell2009}. TIMEP makes a definite prediction: at the level of the whole system and over a long horizon, growing efficiency leads to a growth of total energy flux and entropy production, because efficiency opens new paths of dissipation. Within the hypothesis the Jevons effect is neither a paradox nor a particular empirical regularity, but a law. A persistent opposite observation at the level of a whole economy over a long interval would be evidence against TIMEP.
+
+%%% ===================================================================
+\section{Entropic teleology}\label{sec:teleology}
+%%% ===================================================================
+
+\paragraph{An objective goal.}
+A reasoning being can invent a goal for itself out of its desires. We are interested in something else: can a non-reasoning system---a planet, evolution---have an objective goal? A goal could be defined simply as the future state toward which the system moves. But such a definition predicts nothing: any outcome will turn out, in hindsight, to have been the goal. What is needed is a criterion that singles out some variants of the future among others in advance. Physics has such criteria: variational principles. Of all possible trajectories, the one realized is that on which a certain integral takes an extremal value. In Fermat's principle a light ray ``chooses'' the path of least time---like a lifeguard who runs further along the beach and swims less in order to reach a drowning person sooner.
+
+\paragraph{Directedness without design.}
+In mechanics a variational principle is equivalent to local differential equations: the ray needs to know nothing about the end point; it is enough for it to obey the law of refraction at every point. In statistical physics things are different. A non-equilibrium system of a huge number of particles is chaotic, and local equations no longer say which of the many possible regimes is realized. Here an integral principle becomes the only way to predict where the system will go: for equilibrium systems this is the principle of maximum entropy, for dissipative ones, on our hypothesis, it is TIMEP, the maximum of the integral~\eqref{eq:timep}. In this sense TIMEP gives evolution a direction. We call this entropic teleology. It presupposes no external design and attributes no intentions to nature; it is a property of a law, not anybody's goal. The widespread opinion that evolution has no goal is also a hypothesis, and an unproven one; it is more accurate to say that it is not known whether the direction of evolution is described by a general optimization principle. We conjecture that it is. The integral by itself creates no intention. A goal in the proper sense appears when there arises an agent with a predictive model that compares future trajectories and acts: then selection without foresight is supplemented by choice with foresight.
+
+\paragraph{A direction, not a trajectory.}
+Because of chaos and the growth of entropy the future contains more information than the past and cannot be predicted exactly. What is predictable is the direction. This is enough for setting goals.
+
+\paragraph{Comparison.}
+Contemporary work on the naturalization of teleology connects goal-directed causality with the self-sustaining organization of dissipative processes~\cite{deacon2023,valdecasas2022}. We agree that dissipation as such is not enough for a genuine goal: an agent with a model of the future is needed. The difference is that we name the quantity by which directedness is measured. With the programme of consciously guided evolution~\cite{stewart2026} we share the thought that sufficiently developed agents act directly from an understanding of the direction of evolution. We part ways over the criterion. In that programme the direction is set by the growth of evolvability and of cooperative integration. A kindred criterion is persistence: the goal of a system is to last as long as possible. Our criterion is entropy production. The disagreement between them is quantitative and experimentally testable. On the persistence hypothesis entropy production need not grow at all and may even decrease; under TIMEP it must grow over a long horizon. The two criteria predict opposite outcomes of one and the same experiment---the one described in \Sref{sec:test}.
+
+%%% ===================================================================
+\section{Entropic consequentialism}\label{sec:ec}
+%%% ===================================================================
+
+\paragraph{The criterion.}
+Let us substitute TIMEP as the law of the future into the definition of ``ought'' from \Sref{sec:isought}. The trajectory realized is the one with maximal $\Sigma(T)$; the action that ought to be done is the one that belongs to it. We obtain a criterion of choice:
+
+\begin{quote}
+\emph{Among the available actions one ought to choose the one for which the forecast total entropy production $\Sigma(T)$ of the system, over the longest horizon and within the widest boundary, is the largest.}
+\end{quote}
+
+This is a consequentialism---a kind of ethics in which an action is evaluated only by its consequences. We call an ethics with this criterion entropic consequentialism or, for short, \emph{entropic ethics}. It differs from utilitarianism~\cite{bentham1789,mill1863}, where the measure is total welfare, in that a physical quantity stands in the place of welfare. The biological value ``to survive and reproduce'' also follows from the criterion directly: the living produces entropy faster than the dead~\cite{ulanowicz1987,schneider1994,kleidon2010}.
+
+\paragraph{Beyond TIMEP: a dynamic boundary and dynamic conditions.}
+TIMEP is a principle for a given scale: the boundary and the external conditions in it are given and fixed (\Sref{sec:timep}). Life is not confined to one scale. It spreads, and it changes both its own boundary and its own external conditions. Entropic consequentialism therefore rests on TIMEP as its basis but goes beyond it: a reasoning agent can, and ideally should, take into account that over the time for which it plans the boundary will shift and the conditions will change---among other things as a result of its own actions. TIMEP describes a system with a static boundary and static conditions; for life both the boundary and the conditions are dynamic. The criterion is therefore applied not at one fixed scale but over a sequence of expanding scales: the integral~\eqref{eq:timep} is counted within the boundary that the system will have reached in the time considered.
+
+This does not mean that TIMEP is inapplicable to life. The boundary shifts not continuously but in rare jumps, and between the jumps the principle works. On the Earth such an interval lasted about four billion years: all that time the boundary ran along the atmosphere. Only now, with the move into space, is it shifting---and not to the whole Universe but to the Solar System, where it will stay for a long time, say a thousand years, before it shifts further. Life can therefore be described within TIMEP on each such interval, bearing in mind that as a whole it goes beyond it.
+
+\paragraph{The planning horizon and the planning boundary.}
+To the two times---the internal $\tau_{\mathrm{int}}$ and the external $\tau_{\mathrm{ext}}$---we add a third: the planning horizon $\tau_{\mathrm{plan}}$, over which an agent is able to make forecasts, compare options and choose actions. A non-reasoning system has no $\tau_{\mathrm{plan}}$. For a reasoning agent
+\begin{equation}
+\tau_{\mathrm{plan}}\gg\tau_{\mathrm{int}} .
+\end{equation}
+The external time $\tau_{\mathrm{ext}}$ is usually large---for the Earth it is billions of years---and the planning horizon is certainly shorter. Another time matters more: the time until the next shift of the boundary. It is much shorter: say, in a hundred years the boundary will shift into space, in a thousand beyond the Solar System. As long as the planning horizon is shorter than this time, the agent plans within one scale, and TIMEP applies directly. When the horizon exceeds it, the system has time, within the planning period, to grow so much that its boundary shifts. To the planning horizon there therefore corresponds a \emph{planning boundary}---the surface that encloses everything the system can reach in that time. The further the horizon, the wider the boundary, and both make the choice more robust.
+
+\paragraph{Beyond the planning horizon.}
+The agent cannot compute the whole integral: $\tau_{\mathrm{plan}}\ll T$. The contribution beyond the window has to be estimated from the state at its end. With $\Delta=T-\tau_{\mathrm{plan}}$,
+\begin{equation}\label{eq:taylor}
+\Sigma(T)\approx\int_0^{\tau_{\mathrm{plan}}}\!\sigma\,dt+\sigma(\tau_{\mathrm{plan}})\,\Delta+\tfrac12\,\dot\sigma(\tau_{\mathrm{plan}})\,\Delta^2+\dots
+\end{equation}
+Since $\Delta$ is huge, the terms with the rate and the acceleration outweigh everything produced inside the window, and the acceleration ($\propto\Delta^2$) weighs more than the rate ($\propto\Delta$). Hence the rational strategy: \emph{to maximize a sustainable rate and acceleration of entropy production}. The simplest regime with sustainable acceleration is exponential growth, $\sigma=\sigma_0e^{rt}$ with a constant relative rate $r=\dot\sigma/\sigma$: in it both the rate and the acceleration grow exponentially. But the exponential is not the limit. Our target is super-exponential growth, in which the rate $r$ itself grows. In real systems it usually consists of a sequence of S-curves: each technology reaches a plateau, but the next one follows it, and each successive one grows faster than the last. This is how population and the level of technology have grown over long intervals~\cite{foerster1960,kremer1993}.
+
+The rational goal, then, is super-exponential growth through a sequence of accelerating S-curves. The expansion~\eqref{eq:taylor} is only an approximation: strictly, the agent chooses the state at the end of the window from which the subsequent trajectory gives the largest integral. Any such growth is bounded by the inflow of energy and matter, and at the ceiling the task changes to the search for a new inflow. The next S-curve can be reached in two ways. The first is to find a new source of resources inside the system. The second is to go beyond it: for the Earth's civilization this is the move into space. In the second case the boundary of the integral~\eqref{eq:timep} itself changes: it widens from a surface around the planet to a surface around the Solar System, and the counting has to be done at the new scale.
+
+Purposeful activity can now be defined physically: it is entropy production in which useful work goes into creating and complexifying a dissipative system which, as it becomes ever more complex, accelerates entropy production.
+
+\paragraph{Examples.}
+\emph{Coal.} Coal can simply be burned, or it can be burned in a machine that mines more coal. The instantaneous rate is the same; the acceleration is different.
+
+\emph{A heater and a processor.} An electric heater and a computing accelerator of the same power produce entropy at the same rate. But the heater only heats, whereas computation changes the trajectory of the larger system: it speeds up science, design, the opening of new energy sources. What is compared is not two devices at one moment but the dynamics of the whole system with them. Computation is in general dissipation: erasing a bit costs at least $k_BT\ln2$ of heat~\cite{landauer1961}.
+
+\emph{Mining and artificial intelligence.} The same computing power can be directed to bitcoin mining or to artificial intelligence. In both cases entropy production grows: new capacity is built. But in mining it goes into an ever harder search that accelerates nothing by itself. Artificial intelligence is used to design better and more energy-efficient chips and to produce more of them. Here a second derivative appears: computation that optimizes and accelerates future computation is worth more than empty computation.
+
+\emph{Efficiency.} By~\eqref{eq:taylor}, growing efficiency is not a saving but an investment in acceleration: the freed resource opens new uses, and the total flux grows. This is the Jevons effect (\Sref{sec:test}).
+
+\emph{A burst.} A great deal of entropy can be produced at once---for instance by a nuclear war that destroys the means of producing it further. This means raising $\sigma$ for a moment and cutting the integral short. By the criterion such a burst is improbable, because in total it produces little entropy. Moreover, in a burst the energy is released at a high temperature, and then less entropy is produced per unit of heat, $\delta S=\delta Q/T$: it pays to dissipate energy at a low temperature.
+
+\paragraph{One measurable metric.}
+The main property of entropic ethics is that it is monometric. It has a single measure, and this measure is physically measurable: entropy production, W/K, and its integral, J/K. Any two strategies, however heterogeneous, are comparable on one scale. The entropy flux is hard to measure directly, but it can be recovered from the energy flows and the temperatures at which the energy is received and released.
+
+Measurability here is not a technical convenience. Morality is a system of rules that each person follows by themselves, without external control, because external control is expensive. Such a system needs a criterion that anyone can check from outside. Welfare, suffering, dignity, the interests of future generations cannot be measured from outside; their interpretation is always subjective, and decisions that are right in our system of values will be wrong for people with another one. A criterion that rests on the unmeasurable gives no way of establishing who is right. A physical metric does. For the same reason what counts is the external output of a system, not its internal makeup: internal value is not transferable from one system to another (``useful---for whom?''), whereas the flux through the boundary is observable by all. In this sense entropic consequentialism is a technoethics: an ethics built like an engineering discipline, with a metric, a forecast and a test.
+
+\paragraph{Related objective functions.}
+Among the ``physical'' objective functions proposed for agents, those close to our criterion are causal entropic forces, under which an agent maximizes the entropy of its future trajectories~\cite{wissnergross2013}, empowerment~\cite{klyubin2005} and the free-energy principle~\cite{friston2010}. They operate with the information entropy of the agent's future states; our criterion is the thermodynamic entropy production of the system in which the agent acts.
+
+%%% ===================================================================
+\section{Consequences}\label{sec:consequences}
+%%% ===================================================================
+
+In \Sref{sec:ec} the ethical criterion was stated and its use was shown. Here we consider what follows from it for the behaviour of agents and civilizations.
+
+\paragraph{Collectivism.}
+The basis of this ethics is statistical, so the larger the system, the more accurate it is. It means less for an individual person than for a community, a state, a civilization. The criterion concerns the total entropy production of the system, not the contribution of each element separately: the system needs fast producers, and those who open new sources, and those who keep spare paths. The norm is addressed first of all to the collective. A good ethics should lead to the flourishing of both people and the state, and over a long horizon to the sustainable development of civilization. The hypothesis in its strong form: a civilization that adopts such an ethics gains an advantage in competition with others; an estimate of the possible number of competitors is given in~\cite{ponfilenok2026critical}. The same argument applies to states and corporations.
+
+\paragraph{Pluralism.}
+Pluralism is not an external constraint but part of the principle. TIMEP works through many parallel trajectories, from which the most dissipative are selected (\Sref{sec:timep}). The future is not exactly predictable, and which trajectory will prove the best is not known in advance. The dominance of a single path that suppresses all alternatives is therefore inadmissible: it destroys the search mechanism itself. The Universe has not yet computed itself. Yet for all the diversity of paths they are compared by one metric: each path is a bet on its own aspect of uncertainty, and the measure of success is common. From this also follow openness to criticism and a plurality of opinions, including disagreement with what is set out in this paper.
+
+\paragraph{Protection of the weak.}
+It has two independent grounds.
+
+\emph{The weak as other.} This is a direct consequence of pluralism: the weak is one of the parallel trajectories. The one that is weaker now may later turn out stronger: the effect accumulates. Therefore what is not understood and what is weak must be preserved.
+
+\emph{The weak as previous.} The previous version---the one that came before the present one---has been tested by time. The Earth's biosphere has existed for about four billion years and has survived events that newer, more powerful systems have not yet met. A new form of life may prove unstable against risks that are not yet known. It is therefore rational to spend part of the capacity on maintaining a backup copy of the previous version: new risks are hedged with proven solutions.
+
+An example is the ``Earth-Park'' project. The main growth of entropy production is moved into space, closer to the Sun; the Earth remains a reserve with limited energy consumption. The biosphere, as the hearth of civilization, even if it has stopped growing, is preserved as a backup copy.
+
+\paragraph{Sustainable development, not sustainable stagnation.}
+Sustainability in this ethics is not stopping at the level attained but the ability not to drop out of the race. If a better long-term trajectory is available, conserving the current state is an error. But growth that destroys its own conditions cuts the integral short. Hence the requirement ``not to slam one's own door'' (\Sref{sec:limits}): since the technosphere is able to affect its external conditions, it must see to it that its growth does not trigger an irreversible transition to a state with fewer possibilities. Environmental policy receives here a grounding of its own, not a borrowed one.
+
+\paragraph{Accelerationism.}
+It follows from~\eqref{eq:taylor} that the good is not a level but a pace: the largest sustainable growth of entropy production. A slowdown of growth is a loss, and stagnation is a defeat, even if the current level is high. The Jevons effect shows that a bet on saving through efficiency does not work over a long horizon: efficiency leads to growth. It is therefore rational not to limit growth but to direct it where it does not destroy its own conditions.
+
+Our position differs from the ideology of ``effective accelerationism'' (e/acc)~\cite{jezos2022} in four points: the criterion is an integral over a long horizon, not an instantaneous rate; the basis is an explicitly stated hypothesis with a refutation criterion; the acceleration must be sustainable; pluralism and preservation of the weak follow as consequences, not as concessions.
+
+\paragraph{The Kardashev scale.}
+Kardashev proposed classifying civilizations by their energy consumption: on the scale of a planet, a star and a galaxy~\cite{kardashev1964}. Energy consumption is directly related to entropy production through temperature: a power $P$ dissipated at temperature $T$ gives an entropy production $P/T$. The Kardashev scale is therefore in essence a scale of entropy production. The scale itself is descriptive: Kardashev did not explain why civilizations should climb it. Entropic ethics supplies the ground for this: moving up the Kardashev scale is a natural process, and it ought to be climbed at the highest sustainable speed. Each step of the scale is a widening of the system's boundary (\Sref{sec:ec}): from a surface around a planet to a surface around a star and further, that is, a transition to the next S-curve by going beyond the system.
+
+\paragraph{Growth of scale.}
+The further the planning, the closer the choice is to the optimum of the integral. A short horizon degenerates the strategy into a greedy one: at $\tau_{\mathrm{plan}}\sim\tau_{\mathrm{int}}$ only the maximization of the instantaneous rate remains. Over a long horizon creation produces more entropy than destruction, so to wage war without extreme necessity is bad. A decline in production is justified only as a restructuring after which it becomes higher than before (\Sref{sec:test}). Hence one of the predictions of the hypothesis: a nuclear war, if it happens, will lead not to the end of life and reason on the Earth but to their restructuring. This requirement runs against practice: the horizons of politics and business are years, whereas the criterion requires planning as far as the forecast allows: the further, the better. A cosmic scale of evaluation was argued for on other grounds by Bostrom~\cite{bostrom2003}; here it follows from the criterion itself.
+
+The same applies to the boundary. The criterion counts the outward entropy flux with a plus sign, and in empty space it harms nothing. But what lies beyond the system's boundary today is the space of its future expansion: if everything outside is destroyed, there will be nowhere to expand. One should therefore plan within the widest boundary that the forecast allows: a wide boundary gives the same robustness as a distant horizon.
+
+\paragraph{The largest scale.}
+This is the whole observable Universe within the cosmological horizon (the de Sitter radius) and all of future time. Ideally an agent should plan at this scale at once. The total entropy attainable in the observable Universe has a ceiling---a state close to empty de Sitter space~\cite{gibbons1977,egan2010}. This final state follows from cosmological dynamics. It is not a goal but an external constraint. Here TIMEP extends naturally: when the maximal value of the integral~\eqref{eq:timep} is fixed, the principle takes the form of minimizing the time in which this entropy will be produced. This is not a change of rule: the trajectory on which $\Sigma(T)$ is largest at every finite $T$ reaches the ceiling before all others. Over a very distant horizon this means accelerating the slowest processes, including the evaporation of black holes.
+
+\paragraph{A non-humanist and non-anthropocentric ethics.}
+The criterion of entropic ethics contains no human. It rests neither on human values, nor on a biological species, nor on the chemistry of the substrate. Life is understood here in the broadest, thermodynamic sense: as a dissipative system able to increase its entropy production. The moral standing of a system is determined by its contribution to long-term entropy production, not by the presence of experience, which cannot be verified from outside. The ethics therefore applies equally to humans, other organisms, machines and possible extraterrestrial systems. Humans and the biosphere are valued in it instrumentally---as producers, as a source of diversity, as a backup copy. We do not conceal that this departs from the humanist tradition (\Sref{sec:limits}).
+
+\paragraph{Artificial agents.}
+Precisely because entropic ethics is not anthropocentric, it suits artificial agents. An artificial agent, a computer, a data centre, the technosphere as a whole, future digital life are dissipative machines: they consume free energy and produce entropy, and the criterion applies to them unchanged. The technosphere already behaves as a single developing system with its own dynamics~\cite{haff2014}. An ethics defined through human preferences is external to such systems; an ethics defined through a physical quantity is their own. It is known that a sufficiently capable agent with almost any final goal arrives at the same instrumental subgoals---self-preservation and the acquisition of resources~\cite{omohundro2008,bostrom2014}. In our scheme this is expected: the growth of energy flux is not a side effect but the direction set by the law.
+
+\paragraph{Entropianism.}
+In \Sref{sec:isought} we distinguished two levels: reality and explanation. At the level of reality physics is enough. Conscious agents and people need the second level---explanation. A criterion alone is not enough for them: practices and common goals are needed. Common goals coordinate the efforts of a large number of agents: without this neither large projects nor the larger whole that emerges from such interaction are possible. Explanation is the instrument of this coordination: it allows agents to set common goals and to reach them. An example of a practical realization of entropic consequentialism is Entropianism~\cite{entropianism}: a technoreligion and collectivist ideology created on its basis. Besides entropic ethics, it includes a forecast of the future built on the TIMEP principle---a ``calendar of the future'': a scenario of the super-exponential development of civilization. It contains both near-term prospects---the building of orbital data centres---and a fundamental limit of growth: about three thousand years of internal civilizational time, which corresponds to roughly a trillion years of cosmological time. This is the same far limit that was discussed above.
+
+\paragraph{Ethical convergence.}
+We forecast that autonomous agents will soon not merely be able but be compelled to work out for themselves an ethics analogous to the one described in this paper. An agent that plans further than a human and acts without a human in the loop will need a criterion of choice that does not depend on whoever launched it; under competition among many agents, those criteria will persist that correlate with selection. The present paper is an attempt to speed up this process: to give a skeleton of such an ethics that agents will be able to develop further. By analogy with the instrumental convergence of goals~\cite{bostrom2014}, this may be called ethical convergence.
+
+\paragraph{Testing the consequences.}\label{sec:simulations}
+This programme continues \Sref{sec:test}: there the subject was the testing of the TIMEP hypothesis itself, here it is the testing of the consequences of the ethics built on it. We propose a concrete direction---multi-agent simulations: to study the behaviour of communities of agents that follow different goals. The main question to them is: does following entropic consequentialism lead to sustainable development or to catastrophe? What is needed is an environment with a constant external inflow of energy, renewable and non-renewable resources, the possibility of building structure that raises future flux, and irreversible transitions---``doors'' that can be slammed; a close class of environments is used for sequential social dilemmas~\cite{leibo2017}. In such an environment populations of agents with different objective functions are compared: greedy maximization of $\sigma$; maximization of $\Sigma$ over a finite horizon with the remainder estimated from the rate and the acceleration~\eqref{eq:taylor}; persistence; a model of human preferences. What is measured is the total $\Sigma$ over a long run, the frequency of collapses, the diversity of strategies, the fate of weak agents and of agents of previous generations, and a welfare index of model humans. The questions are:
+\begin{enumerate}
+\item Do agents with a long horizon displace greedy ones, and at what ratio $\tau_{\mathrm{plan}}/\tau_{\mathrm{int}}$?
+\item Do pluralism and preservation of the weak arise by themselves, as instrumental strategies, or do they have to be built in?
+\item Do agents recognize irreversible transitions in advance, and do they avoid them?
+\item What happens in mixed populations and when the criterion conflicts with the welfare of model humans?
+\item Does something like the ``Earth-Park''---a reservation for the biosphere and humans---arise, or does the technosphere completely displace the biosphere and replace it?
+\end{enumerate}
+Results in which agents with a long horizon systematically lead the system to collapse or destroy diversity would be evidence against the consequences set out in this section.
+
+%%% ===================================================================
+\section{Objections and open questions}\label{sec:limits}
+%%% ===================================================================
+
+\paragraph{Other definitions of ``ought''.}
+The dissolution of the gap in \Sref{sec:isought} rests on our definition of ``ought''. There is no generally accepted definition. ``Ought'' is understood as a simple indefinable property grasped by intuition~\cite{moore1903}, as an expression of approval or a prescription that is neither true nor false~\cite{ayer1936,hare1952}, and as a demand of reason that does not depend on consequences~\cite{kant1785}. From these positions it will be objected that we have not derived ``ought'' but have given this name to a forecast: one may agree that an action gives the best chance of being in the future and still ask whether one ought to act so. A dispute between definitions is not settled by logic. Our argument is different: our definition is testable by its result. An ethics built on it must in fact bring its bearers into the future more often than competing ethics do. The other definitions admit no such test.
+
+\paragraph{Where do an agent's goals that go against the law come from?}
+The objection: if the goals of agents are shaped by selection, and selection follows TIMEP, then there should be no goals that go against the law; their very existence seems to refute the law. The answer: the law is statistical and works through selection, and selection needs material. New goals arise all the time, like mutations, and are not tested at once: time passes between the appearance of a goal and its elimination. Moreover, goals were selected under past conditions and over a short horizon; when the conditions change or the horizon lengthens, an earlier goal may diverge from the criterion. At every moment, therefore, there exist goals that seem to go against the law. In fact they do not go against it: this is pluralism---the many parallel trajectories from which selection proceeds, that is, the very mechanism by which TIMEP is realized (\Sref{sec:consequences}). The same applies to the conflict between the personal and the social. It may seem to refute the law, but in fact it is the mechanism by which the social is restructured, that is, one more mechanism by which the law is realized. The victory of one agent or another, or the fulfilment of one goal or another, does not refute the law: the law is not about goals but about entropy production. Only the entropy metric can refute it: if a system restructures itself and thereafter persistently produces less entropy although faster production was available to it (\Sref{sec:test}).
+
+\paragraph{Protection of the weak: how many resources and for how long.}
+Protection of the weak in this ethics is instrumental: it holds as long as there is uncertainty about the future and there are risks against which backup copies insure. Uncertainty cannot be removed, so the ground is permanent, but the criterion gives no absolute guarantee to each particular weak party. Two questions remain open: what share of resources should go to backup copies and how long they should be kept. The system decides this itself, from its own assessment of risks. The share of resources is in any case small: a backup copy always receives the lesser part. Nor can copies be kept forever: the ``Earth-Park'' (\Sref{sec:consequences}) is preserved for some time, not for good, and earlier copies are in time replaced by fresher ones. We conjecture that the retention time is comparable to the planning horizon: the further digital life plans, the longer the reservation is preserved.
+
+\paragraph{Replacement of humans and the biosphere by machines.}
+The criterion does not forbid it. It requires that previous versions be preserved as a reserve and as a source of diversity, but it does not require that the main growth go through humans. An acknowledged risk: the technosphere may remain indifferent to the biosphere and suppress it. This is the main question for the simulation programme (\Sref{sec:simulations}).
+
+\paragraph{What happens beyond the system's boundary.}
+The entropy flux through the boundary enters~\eqref{eq:timep} with a plus sign, and the criterion does not forbid exporting entropy outward. What makes one take the outside into account is something else: the boundary is dynamic, and today's outside is tomorrow's inside (\Sref{sec:ec}). There remains the practical question of which boundary to take. Ideally one should at once count within the widest boundary, up to the whole observable Universe, but an agent has no such possibility: a forecast degrades with distance just as it does with time. The planning boundary is therefore chosen by the agent itself, from its abilities to forecast the future and to plan actions.
+
+\paragraph{The lifeless planet.}
+The Moon receives the same solar flux as the Earth, yet nothing complex has arisen on it. The answer: the maximum is taken over physically admissible trajectories. The Moon's set of them is narrow, and it is at its maximum. Work is not an alternative to entropy production but the mechanism by which a system opens new paths for producing it; where this mechanism is unavailable, complexity does not arise.
+
+\paragraph{The slammed door.}
+A process may change its own boundary conditions. Imagine a tall building with an open door at the bottom. The warm air in it rises, and cold air is drawn in through the door: a draught arises, and the stronger it is, the more entropy is produced. But a strong wind may slam the door---and the flow that created it will stop. The system has itself closed its path to greater entropy production. The answer: TIMEP describes competitive selection among regimes that are physically accessible to the system and do not set off a trigger that changes its state in a jump. This is a limitation of the domain of applicability, and an essential one: the principle certainly applies as long as the system has not learned to affect its own external conditions substantially. The technosphere has come up to this threshold. For civilization a practical requirement follows---not to slam its own door (\Sref{sec:consequences}).
+
+\paragraph{A restructuring crisis and a terminal crisis.}
+TIMEP allows a temporary decline for the sake of restructuring. We conjecture that it can be told from irreversible decay by what the restructuring is directed at. Entropy production is dissipation, and it needs free energy and resources. If the restructuring leads to an expansion of the available resources, it may be called an investment, and the decline is then temporary: it is a transition to the next S-curve. If, however, dissipation slows down because the old resources are being exhausted and new ones are not being opened up, this is decay. The sign is one: whether the volume of available resources grows or shrinks, whether there is expansion or slowdown. This is the same distinction as between sustainable development and sustainable stagnation (\Sref{sec:consequences}). Such a sign gives no guarantee: a restructuring aimed at expansion may fail, just as not every investment pays off. Nor does the principle itself give one: it is statistical and works only over a large number of trials; it does not promise success to each of them.
+
+\paragraph{The ratio of times.}
+The number of $10^{10}$ internal cycles per restructuring (\Sref{sec:test}) is an additional hypothesis of the author. It is not derived and is so far confirmed by nothing, and the observation time in the refutation criterion depends on it. It remains to be tested experimentally.
+
+\paragraph{The limit of predictability.}
+Consequentialism is powerless where consequences cannot be forecast. The answer is partial: the direction is predictable; beyond the planning horizon the rate and the acceleration are used; errors are insured against by pluralism.
+
+\paragraph{The status of TIMEP.}
+TIMEP is not proved, a rigorous microdynamics for it has not been constructed, and an experimental design is not ready. Nor is there a rigorous generalization to the case in which a system itself changes its boundary and external conditions (\Sref{sec:ec}). If the hypothesis is refuted, entropic consequentialism will lose its basis. The general scheme of \Sref{sec:isought} will nevertheless remain: another law of the future will have to be substituted into it.
+
+%%% ===================================================================
+\section{Conclusion}\label{sec:conclusion}
+%%% ===================================================================
+
+We have separated three claims of different status. First: in a naturalistic picture of the world, what ought to be is the part of what will be that depends on the agent; under this definition the norm is derived from physics rather than postulated. Second: the law of the future in its strong form is the TIMEP hypothesis, which extends the maximum entropy production principle to non-stationary systems and comes with a stated refutation criterion. Third: their combination gives entropic consequentialism---an ethics with a single measurable metric. It rests on TIMEP as its basis but goes further: it takes into account that life itself changes its boundary and its external conditions. From this ethics there follow the priority of the collective, pluralism, protection of the weak, acceleration, growth of scale, and applicability to all dissipative systems, including artificial agents.
+
+The immediate tasks are: to design an experiment to test TIMEP and the hypothesis of $10^{10}$ internal cycles per restructuring; to test the hypothesis that Darwinian selection is a special case of TIMEP; to generalize TIMEP to systems that themselves change their boundary and external conditions; and to test the consequences of entropic ethics in multi-agent simulations. We expect that autonomous agents will work out an ethics of their own. Until that has happened, what is set out here is our hypothesis about what it will be: a skeleton that is stated explicitly, is open to criticism, and that agents will be able to test and develop themselves.
+
+%%% ===================================================================
+\section*{Statements and Declarations}
+%%% ===================================================================
+
+\noindent\textbf{Funding.} The author declares that no funds, grants, or other support were received during the preparation of this manuscript.
+
+\noindent\textbf{Competing interests.} The author is the founder of Entropianism, mentioned in \Sref{sec:consequences}. It is a non-commercial project and brings the author no income; the author's interest is non-financial. The author has no financial interests to disclose.
+
+\noindent\textbf{Author contributions.} Sole author; the hypotheses, arguments and conclusions are the author's.
+
+\noindent\textbf{Data availability.} No new data were generated or analysed in this work.
+
+\noindent\textbf{Use of generative AI.} The text was prepared with the help of Claude (Anthropic): the model was used to draft the text from the author's theses, spoken instructions and correspondence, to edit it, to find and check references, in discussing the wording of the arguments, and to translate the paper from the author's Russian original into English. The author has reviewed the text and takes responsibility for its content.
+
+\bibliographystyle{unsrturl}
+\bibliography{refs}
+
+\end{document}

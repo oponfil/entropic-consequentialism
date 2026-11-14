@@ -1,0 +1,27 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.blg
+*.bbl
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# macOS
+.DS_Store
+
+# Local materials, not for the repository
+email_recipients.*
+cover_letter.*
+
+# Editor and assistant project settings, local only
+.cursor/
+.claude/
