@@ -1,5 +1,7 @@
 # Entropic Consequentialism
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24223402.svg)](https://doi.org/10.5281/zenodo.24223402)
+
 **Author:** Oleg Ponfilenok · Independent researcher
 
 Manuscript proposing to derive the goals of agents from physics. What ought to be is defined as the part of the future state of the world that depends on the agent's actions; the law of the future is supplied by the **TIMEP** hypothesis (time-integrated maximum entropy production); the resulting ethics, **entropic consequentialism** or **entropic ethics**, compares actions by the entropy production they are forecast to yield.
@@ -70,15 +72,21 @@ Under XeLaTeX the Russian version uses the Avenir Next font (shipped with macOS)
 
 ## Citation
 
+If you use this work, please cite the preprint:
+
 ```bibtex
 @misc{ponfilenok2026entropic,
-  author = {Ponfilenok, Oleg},
-  title  = {Entropic Consequentialism},
-  year   = {2026},
-  url    = {https://github.com/oponfil/entropic-consequentialism},
-  note   = {Preprint}
+  author    = {Ponfilenok, Oleg},
+  title     = {Entropic Consequentialism},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.24223402},
+  url       = {https://doi.org/10.5281/zenodo.24223402},
+  note      = {Preprint}
 }
 ```
+
+- Zenodo: https://doi.org/10.5281/zenodo.24223402
 
 ## Keywords
 
